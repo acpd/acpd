@@ -7,6 +7,9 @@ source:
   url: https://pypi.python.org/packages/source/P/PyYAML/PyYAML-3.11.tar.gz
   md5: f50e08ef0fe55178479d3a618efe21db
 
+build:
+  number: 99
+
 requirements:
   build:
     - python
