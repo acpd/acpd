@@ -7,6 +7,9 @@ source:
   url: https://www.sqlite.org/2015/sqlite-autoconf-3081101.tar.gz
   sha1: d0e22d7e361b6f50830a3cdeafe35311443f8f9a
 
+build:
+  number: 99
+
 test:
   commands:
     - sqlite3 --version

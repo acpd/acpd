@@ -10,7 +10,7 @@ source:
     - tpn.patch
 
 build:
-  number: 2
+  number: 99
 
 about:
   home: http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
