@@ -47,14 +47,14 @@ if [ `uname` == Darwin ]; then
     popd
 fi
 
-if [ $CC != "gcc" ]; then
-    $REPLACE $CC gcc $STDLIB_DIR/_sysconfigdata.py \
-        $STDLIB_DIR/config-3.5m/Makefile
-    $REPLACE $CXX g++ $STDLIB_DIR/_sysconfigdata.py \
-        $STDLIB_DIR/config-3.5m/Makefile
-fi
-
-$REPLACE '-Werror=declaration-after-statement' '' \
-    $PREFIX/lib/python3.5/_sysconfigdata.py \
-    $PREFIX/lib/python3.5/config-3.5m/Makefile
-
+#if [ $CC != "gcc" ]; then
+#    $REPLACE $CC gcc $STDLIB_DIR/_sysconfigdata.py \
+#        $STDLIB_DIR/config-3.5m/Makefile
+#    $REPLACE $CXX g++ $STDLIB_DIR/_sysconfigdata.py \
+#        $STDLIB_DIR/config-3.5m/Makefile
+#fi
+#
+#$REPLACE '-Werror=declaration-after-statement' '' \
+#    $PREFIX/lib/python3.5/_sysconfigdata.py \
+#    $PREFIX/lib/python3.5/config-3.5m/Makefile
+#

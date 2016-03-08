@@ -14,7 +14,7 @@ source:
 build:
   no_link: 
     - bin/python
-  number: 1       [linux]
+  number: 99
 
 requirements:
   build:
