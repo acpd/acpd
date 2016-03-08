@@ -6,39 +6,22 @@ source:
   fn: setuptools-20.2.2.tar.gz
   url: https://pypi.python.org/packages/source/s/setuptools/setuptools-20.2.2.tar.gz
   md5: bf37191cb4c1472fb61e6f933d2006b1
-#  patches:
-   # List any patch files here
-   # - fix.patch
 
 build:
-  # noarch_python: True
   preserve_egg_dir: True
   entry_points:
-    # Put any entry points (scripts to be generated automatically) here. The
-    # syntax is module:function.  For example
-    #
-    # - setuptools = setuptools:main
-    #
-    # Would create an entry point called setuptools that calls setuptools.main()
-
     - easy_install = setuptools.command.easy_install:main
-    - easy_install-2.7 = setuptools.command.easy_install:main
-
-  # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
-  # number: 1
+    - easy_install-2.7 = setuptools.command.easy_install:main [py27]
+  number: 99
 
 requirements:
   build:
     - python
-    - setuptools
 
   run:
     - python
-    - setuptools
 
 test:
-  # Python imports
   imports:
     - pkg_resources
     - pkg_resources._vendor
@@ -47,29 +30,11 @@ test:
     - setuptools
     - setuptools.command
     - setuptools.extern
-
   commands:
-    # You can put test commands to be run here.  Use this to test that the
-    # entry points work.
-
     - easy_install --help
-    - easy_install-2.7 --help
-
-  # You can also put a file called run_test.py in the recipe that will be run
-  # at test time.
-
-  requires:
-    - mock
-    - pytest >=2.8
-    - setuptools[ssl]
-    # Put any additional test requirements here.  For example
-    # - nose
+    - easy_install-2.7 --help [py27]
 
 about:
   home: https://bitbucket.org/pypa/setuptools
   license: MIT License
   summary: 'Easily download, build, install, upgrade, and uninstall Python packages'
-
-# See
-# http://docs.continuum.io/conda/build.html for
-# more information about meta.yaml
