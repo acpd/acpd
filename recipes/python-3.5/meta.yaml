@@ -1,11 +1,11 @@
 package:
   name: python
-  version: 3.5.0
+  version: 3.5.1
 
 source:
-  fn: Python-3.5.0.tgz
-  url: https://www.python.org/ftp/python/3.5.0/Python-3.5.0.tgz
-  md5: a56c0c0b45d75a0ec9c6dee933c41c36
+  fn: Python-3.5.1.tgz
+  url: https://www.python.org/ftp/python/3.5.1/Python-3.5.1.tgz
+  md5: be78e48cdfc1a7ad90efff146dce6cfe
   patches:
     - version.patch
     - osx-dist.patch        [osx]
