@@ -9,17 +9,16 @@ source:
 
 build:
   number: 99
-  preserve_egg_dir: True
   entry_points:
     - wheel=wheel.tool:main
 
 requirements:
   build:
-    - python ==3.5
+    - python
     - setuptools
 
   run:
-    - python ==3.5
+    - python
     - setuptools
 
 test:
