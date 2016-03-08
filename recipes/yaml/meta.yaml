@@ -1,0 +1,16 @@
+package:
+  name: yaml
+  version: "0.1.6"
+
+source:
+  fn: yaml-0.1.6.tar.gz
+  url: http://pyyaml.org/download/libyaml/yaml-0.1.6.tar.gz
+  md5: 5fe00cda18ca5daeb43762b80c38e06e
+
+build:
+  number: 99
+
+about:
+  home: http://pyyaml.org/wiki/LibYAML
+  license: MIT
+  summary: "LibYAML is a YAML 1.1 parser and emitter written in C"
