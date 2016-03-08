@@ -1,10 +1,10 @@
 package:
   name: conda
-  version: 3.19.1.51.g2ba04a6
+  version: "4.0.1"
 
 source:
   git_url: https://github.com/conda/conda.git
-  git_tag: 2ba04a6b2617227de578f4af54ff11115f97ca5c
+  git_tag: 4.0.1
 
 build:
   # These are present when the new environment is created
@@ -12,14 +12,25 @@ build:
   # for conda-build to realize they should be included.
   always_include_files:
     - bin/conda  [unix]
-  string: dev_py{{ environ['CONDA_PY'] }}
+    - bin/activate  [unix]
+    - bin/deactivate  [unix]
+  entry_points:
+    - conda = conda.cli:main
+  string: py{{ environ['CONDA_PY'] }}
+  number: 99
 
 requirements:
   build:
     - python
+    - setuptools
+    - requests
+    - pyyaml
+    - conda-env
+    - pycosat
+    - menuinst [win]
   run:
     - python
-    - pycosat
+    - pycosat >=0.6.1
     - pyyaml
     - requests
     - conda-env
@@ -37,4 +48,4 @@ about:
   home: http://conda.pydata.org/
   license: BSD
   license_file: LICENSE.txt
-  summary: cross-platform, Python-agnostic binary package manager
+  summary: OS-agnostic, system-level binary package manager. 
