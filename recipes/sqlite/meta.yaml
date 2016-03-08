@@ -1,11 +1,11 @@
 package:
   name: sqlite
-  version: "3.8.11.1"
+  version: "3.11.1"
 
 source:
-  fn: sqlite-autoconf-3081101.tar.gz
-  url: https://www.sqlite.org/2015/sqlite-autoconf-3081101.tar.gz
-  sha1: d0e22d7e361b6f50830a3cdeafe35311443f8f9a
+  fn: sqlite-autoconf-3110100.tar.gz
+  url: https://www.sqlite.org/2016/sqlite-autoconf-3110100.tar.gz
+  sha1: c4b4dcd735a4daf5a2e2bb90f374484c8d4dad29
 
 build:
   number: 99
