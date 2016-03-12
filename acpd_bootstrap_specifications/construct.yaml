@@ -1,0 +1,14 @@
+name: acpd_bootstrap
+version: 0.1.0
+
+channels:
+  - file:///opt/conda/conda-bld/
+
+specs:
+  - python 3.5*
+  - pip
+  - wheel
+  - conda
+  - conda-build
+  - constructor
+  - pycrypto
