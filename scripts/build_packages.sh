@@ -29,12 +29,13 @@ conda build /acpd/recipes/pyyaml
 
 # build conda requirements
 conda build /acpd/recipes/requests
-conda build /acpd/recipes/conda-env
+conda build /acpd/recipes/conda-env  --no-test  # test depend on conda
 conda build /acpd/recipes/pycosat
 conda build /acpd/recipes/pycrypto
 
 # build conda
 conda build /acpd/recipes/conda
+conda build /acpd/recipes/conda-env  --test
 
 # build conda-build requirements
 conda build /acpd/recipes/markupsafe
