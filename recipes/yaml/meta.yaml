@@ -8,7 +8,7 @@ source:
   md5: 5fe00cda18ca5daeb43762b80c38e06e
 
 build:
-  number: 99
+  number: 0
 
 about:
   home: http://pyyaml.org/wiki/LibYAML

@@ -8,7 +8,7 @@ source:
   md5: 44d667c142d7cda120332623eab69f40
 
 build:
-  number: 99
+  number: 0
 
 about:
   home: http://zlib.net/

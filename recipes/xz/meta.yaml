@@ -8,7 +8,7 @@ source:
   md5: 19d924e066b6fff0bc9d1981b4e53196
 
 build:
-  number: 99
+  number: 0
 
 about:
   home: http://tukaani.org/xz/

@@ -8,7 +8,7 @@ source:
   md5: 407b229e6a681ffb0e2cdd5915cb2d01
 
 build:
-  number: 99
+  number: 0
 
 about:
   home: https://nixos.org/patchelf.html

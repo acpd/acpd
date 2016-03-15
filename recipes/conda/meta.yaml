@@ -17,7 +17,7 @@ build:
   entry_points:
     - conda = conda.cli:main
   string: py{{ environ['CONDA_PY'] }}
-  number: 99
+  number: 0
 
 requirements:
   build:

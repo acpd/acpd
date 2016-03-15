@@ -8,7 +8,7 @@ source:
   md5: e9c3844db343f47d16040b32ad9072be
 
 build:
-  number: 99
+  number: 0
   entry_points:
     - pip=pip:main
     - pip2=pip:main    [py2k]

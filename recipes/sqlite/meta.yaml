@@ -8,7 +8,7 @@ source:
   sha1: c4b4dcd735a4daf5a2e2bb90f374484c8d4dad29
 
 build:
-  number: 99
+  number: 0
 
 test:
   commands:

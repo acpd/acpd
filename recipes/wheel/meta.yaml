@@ -8,7 +8,7 @@ source:
   md5: 555a67e4507cedee23a0deb9651e452f
 
 build:
-  number: 99
+  number: 0
   entry_points:
     - wheel=wheel.tool:main
 
