@@ -1,6 +1,10 @@
 #!/bin/bash
 
-make -f Makefile-libbz2_so
+if [ `uname` == Darwin ]; then
+    make
+else
+    make -f Makefile-libbz2_so
+fi
 make
 make install PREFIX=$PREFIX
 
