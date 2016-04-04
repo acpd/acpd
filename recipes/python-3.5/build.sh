@@ -1,11 +1,9 @@
 #!/bin/bash
 
-REPLACE=replace
-
 if [ `uname` == Darwin ]; then
     export CFLAGS="-I$PREFIX/include $CFLAGS"
     export LDFLAGS="-L$PREFIX/lib -headerpad_max_install_names $LDFLAGS"
-    $REPLACE "@OSX_ARCH@" "$ARCH" Lib/distutils/unixccompiler.py
+    sed -i -e "s/@OSX_ARCH@/$ARCH/g" Lib/distutils/unixccompiler.py
 fi
 
 PYTHON_BAK=$PYTHON
@@ -36,14 +34,15 @@ if [ `uname` == Darwin ]; then
     rm -rf build
     cp $RECIPE_DIR/setup_misc.py .
     $PYTHON setup_misc.py build
-    cp $SRC_DIR/Modules/build/lib.macosx-*/_hashlib.so \
-       $SRC_DIR/Modules/build/lib.macosx-*/_ssl.so \
-       $SRC_DIR/Modules/build/lib.macosx-*/_sqlite3.so \
-       $SRC_DIR/Modules/build/lib.macosx-*/_tkinter.so \
+    mkdir -p $DYNLOAD_DIR
+    cp $SRC_DIR/Modules/build/lib.macosx-*/_hashlib*.so \
+       $SRC_DIR/Modules/build/lib.macosx-*/_ssl*.so \
+       $SRC_DIR/Modules/build/lib.macosx-*/_sqlite3*.so \
+       $SRC_DIR/Modules/build/lib.macosx-*/_tkinter*.so \
            $DYNLOAD_DIR
     popd
     pushd $DYNLOAD_DIR
-    mv readline_failed.so readline.so
+    mv readline*.so readline.so
     popd
 fi
 
