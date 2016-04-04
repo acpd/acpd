@@ -23,14 +23,14 @@ requirements:
     - readline    [unix]
     - tk          [unix]
     - openssl     [unix]
-    - xz ==5.0.5          [unix]
+    - xz          [unix]
   run:
     - zlib        [unix]
     - sqlite      [unix]
     - readline    [unix]
     - tk          [unix]
     - openssl     [unix]
-    - xz ==5.0.5         [unix]
+    - xz          [unix]
 
 test:
   commands:
