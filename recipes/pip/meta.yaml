@@ -1,11 +1,11 @@
 package:
   name: pip
-  version: "8.1.0"
+  version: "8.1.1"
 
 source:
-  fn: pip-8.1.0.tar.gz
-  url: https://pypi.python.org/packages/source/p/pip/pip-8.1.0.tar.gz
-  md5: e9c3844db343f47d16040b32ad9072be
+  fn: pip-8.1.1.tar.gz
+  url: https://pypi.python.org/packages/source/p/pip/pip-8.1.1.tar.gz
+  md5: 6b86f11841e89c8241d689956ba99ed7
 
 build:
   number: 0
