@@ -1,11 +1,11 @@
 package:
   name: setuptools
-  version: "20.2.2"
+  version: "20.7.0"
 
 source:
-  fn: setuptools-20.2.2.tar.gz
-  url: https://pypi.python.org/packages/source/s/setuptools/setuptools-20.2.2.tar.gz
-  md5: bf37191cb4c1472fb61e6f933d2006b1
+  fn: setuptools-20.7.0.tar.gz
+  url: https://pypi.python.org/packages/source/s/setuptools/setuptools-20.7.0.tar.gz
+  md5: 5d12b39bf3e75e80fdce54e44b255615
 
 build:
   preserve_egg_dir: True
